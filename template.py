@@ -37,8 +37,11 @@ lose_image = font0.render( 'YOU LOSE!', True, (255,0,0) )
 
 display.set_caption("Shooter")
 
+#ТУТ НАДО НАПИСАТЬ НАЗВАНИЕ ФАЙЛА ФОНА
 background = transform.scale(image.load("файл-фон"), (win_width, win_height))
 
+
+#ТУТ ЗАГРУЗИТЬ ПАРАМЕТРЫ ГЛАВНОГО СПРАЙТА
 sprite = GameSprite('картинка',икс,игрек,скорость,ширина,высота)
 
 
@@ -55,9 +58,8 @@ while game:
         if event0.type == QUIT:
             game = False
         elif event0.type == MOUSEBUTTONDOWN and event0.button == 1:
-            0
+            #ТУТ НАПИСАТЬ ОБРАБОТКУ КЛИКА
     if not(finish): 
-
         #игровая логика
         image_score = font1.render('Счёт: '+str(score), True, (255,255,255) )
         
@@ -66,9 +68,3 @@ while game:
         window.blit(background,(0, 0))          
         window.blit(image_score,(250,150))
         sprite.reset()
-
-
-
-
-
-
